@@ -32,7 +32,8 @@
     "docs": "pushd packages/react-storefront; yarn docs; popd;",
     "deploy-storybook": "gh-pages -d packages/react-storefront/storybook-static",
     "test": "pushd packages/react-storefront; yarn test; popd;",
-    "add-license": "node ./tasks/addLicense"
+    "add-license": "node ./tasks/addLicense",
+    "upgrade-docs": "rm -Rf docs && git clone https://github.com/moovweb/moov-pwa-docs.git docs && node ./tasks/upgradeDocsVersion && cd docs && git add package.json && git commit -m \"RSF Upgrade\""
   },
   "workspaces": {
     "packages": [
