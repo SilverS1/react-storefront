@@ -33,7 +33,7 @@
     "deploy-storybook": "gh-pages -d packages/react-storefront/storybook-static",
     "test": "pushd packages/react-storefront; yarn test; popd;",
     "add-license": "node ./tasks/addLicense",
-    "upgrade-docs": "rm -Rf docs && git clone https://github.com/moovweb/moov-pwa-docs.git docs && node ./tasks/upgradeDocsVersion && cd docs && git add package.json && git commit -m \"RSF Upgrade\""
+    "upgrade-docs": "rm -Rf docs && git clone https://github.com/moovweb/moov-pwa-docs.git docs && node ./tasks/upgradeDocsVersion && cd docs && yarn && git add . && git commit -m \"RSF Upgrade\" && git push"
   },
   "workspaces": {
     "packages": [
